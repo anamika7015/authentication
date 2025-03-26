@@ -13,9 +13,11 @@ export default function Home() {
               <br />
               in bio.
             </h1>
-            <p className="w-[40vw] mb-4 text-yellow-300">Join 50M+ people using Linktree for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube and other social media profiles.</p>
+            <p className="w-[40vw] mb-4 text-yellow-300">Join 50M+ people using Linktree for their link in bio.
+              One link to help you share everything you create, curate and sell from your Instagram, TikTok,
+              Twitter, YouTube and other social media profiles.</p>
             <div className="flex gap-2">
-              <input type="text" placeholder="linktr.ee/yourname" className="p-4 border rounded-md bg-white font-semibold" />
+              <input type="text" placeholder="linktr.ee/yourname" className="p-4 border rounded-md bg-white font-semibold"/>
               <button className="p-4 border rounded-full bg-pink-200 font-semibold">Claim your Linktree</button>
             </div>
           </div>
@@ -27,6 +29,6 @@ export default function Home() {
       <section className="bg-red-500 h-screen ">
 
       </section>
-    </main>
-  );
+    </main>
+  );
 }
