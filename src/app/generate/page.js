@@ -1,9 +1,43 @@
-import React from 'react'
+import { log } from 'console';
+import { link } from 'fs';
+import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 const Generate = () => {
+  const [link,setlink] = useState("")
+  const [linkText,setlinkText] = useState("")
+   const addlink = async(Text,link,handle) => {
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type","application/json");
+
+  const raw = JSON>stringify({
+    "link": link,
+    "linkText": text,
+    "handle" : handle
+  });
+  const requestOptions = {
+    method :"POST",
+    headers : myHeaders,
+    body : raw,
+    redirect :"follow"
+  };
+  const r = await fetch("http:localhost:3000/api/add", requestOptions)
+  const result = await r.json()
+  toast(r.message)
+  
+
+
+
+    
+   }
+    
+    
   return (
     <div className='bg-green-200 min-h-screen grid grid-cols-2'>
      <div className=' col1 flex justify-center items-center gap-2 flex-col'>
+     
+     <ToastContainer />
      <h1 className='font-bold text-4xl '>Create your Bittree</h1>
      <div className='flex flex-col gap-5 border-black my-8'>
       <h2 className=' font-semibold text-2xl'> Step1 : claim your Handle</h2>
